@@ -1507,6 +1507,8 @@ img.simg.banner{width:100%;height:clamp(120px,22vw,190px);object-fit:cover;objec
   .st-btn.st-close{padding:0;width:40px;height:40px;min-height:40px;display:grid;place-items:center;font-size:18px}
   .st-stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#000;cursor:pointer;min-height:0}
   .st-stage .imgwrap,.st-stage img.st-img,.st-stage video{width:100%;height:100%;object-fit:cover;display:block;margin:0}
+  /* a clip is always shown whole (reviewers, 7 Nov: story videos cut off on a phone): black bars above and below, never cropped */
+  .st-stage video{object-fit:contain;background:#000}
   .st-stage .imgwrap{display:block}
   .st-stage .mediaph{margin:16px;min-height:120px}
   .st-blank{display:grid;place-items:center;width:100%;height:100%;background:linear-gradient(160deg,var(--navy),var(--blue))}
@@ -2028,6 +2030,9 @@ var COURSE={"id": "ssp62-monitoring-anticipating-pressure", "project": "afc27", 
    in one IIFE, so content.js calls these helpers directly by name.
    Section numbering: 0 = intro (no bar) · 1..NSEC = taught sections (stepper)
                       FINAL = NSEC+1 (scored assessment, clock bar) · END = NSEC+2 (debrief/certificate, no bar) */
+/* ?qa=learner (2026-11-07): the learner QA (learner_qa.py) plays the course as a learner — every wait for a voice or a video, every gate —
+   while still seeing which screen it is on; a review build's free movement is switched off for that page */
+if(/[?&]qa=learner(&|$)/.test(location.search))COURSE.reviewFree=false;
 var NSEC=COURSE.sections.length, FINAL=NSEC+1, END=NSEC+2;
 /* script section number → stepper index (1..NSEC); identity when sections are 1..N */
 var SECIDX={};COURSE.sections.forEach(function(s,i){SECIDX[String(s.n!==undefined?s.n:i+1)]=i+1;});
@@ -2677,7 +2682,7 @@ function boot(){
 /* once a language is chosen (or already known / resuming) the choice screen leaves the course for good */
 function dropLangScreen(){if(S.length&&S[0].id==='0.0'){S.shift();if(cur>0)cur--;}}
 /* QA hook — only exposed when the URL carries ?qa=1, never in normal use */
-if(/[?&]qa=1(&|$)/.test(location.search))window.QA={go:goTo,st:st,done:done,course:COURSE,
+if(/[?&]qa=(1|learner|review)(&|$)/.test(location.search))window.QA={go:goTo,st:st,done:done,course:COURSE,
   script:function(){return typeof SCRIPT!=='undefined'?SCRIPT:null;},
   ids:function(){return S.map(function(s){return s.id;});},
   sec:function(id){var s=S[idxOf(id)];return s?s.sec:null;},
@@ -3303,7 +3308,7 @@ Object.assign(BUILD,{
       cnt.textContent=(i+1)+' / '+n;var wait=!!(it._say&&!it._say._heard);
       if(i>=n-1){nb.hidden=true;if(!wait)gate(btn,n,n,U('opened'));}else{nb.disabled=wait;if(!wait)nb.focus();}
       if(it._say&&!it._say._heard)it._say._start();}
-    nb.addEventListener('click',function(){if(shown<n){show(shown);shown++;}});
+    nb.addEventListener('click',function(){if(shown<n){shown++;show(shown-1);}});   /* count first (reviewers, 7 Nov: Next never came back after the voice in a review copy, where 'heard' fires at once) */
     cnt.textContent='0 / '+n;
     if(pic){var f0=(steps[0]&&steps[0].media)||media(s)[0];if(f0){var ff=sc2_assetFile(f0);img.appendChild(imgOrPh(ff,assetAlt(ff),'simg'));}}
   }
