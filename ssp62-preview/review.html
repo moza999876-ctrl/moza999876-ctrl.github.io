@@ -4676,10 +4676,12 @@ function hearAll(files,done){
   var pb=w.querySelector('.hear-play'),ag=w.querySelector('.hear-again'),lab=w.querySelector('.hear-lab'),fin=false,called=false;
   function fire(){if(called)return;called=true;if(done)done();}
   var aus=files.map(function(f){var a=document.createElement('audio');a.preload='auto';a.src=f;w.appendChild(a);return a;});
-  function end(){if(fin)return;fin=true;w._heard=true;w.classList.remove('playing');w.classList.add('heard');pb.hidden=true;ag.hidden=false;lab.textContent=U('voiceDone');fire();}
+  function end(){if(fin)return;fin=true;clearTimeout(w._t);w._heard=true;w.classList.remove('playing');w.classList.add('heard');pb.hidden=true;ag.hidden=false;lab.textContent=U('voiceDone');fire();}
   function play(k){if(!w.isConnected&&k>0)return;if(HEAR_NOW&&HEAR_NOW!==aus)HEAR_NOW.forEach(function(x){try{x.pause();}catch(_){}});HEAR_NOW=aus;
     aus.forEach(function(x,j){if(j!==k)try{x.pause();}catch(_){}});
-    var a=aus[k];try{a.currentTime=0;}catch(_){}var p=a.play();
+    var a=aus[k];try{a.currentTime=0;}catch(_){}clearTimeout(w._t);var p=a.play();
+    /* safety net (2026-11-07, SSP 6.2 reviewer: Next never activated after the first line): once playback has started, if 'ended' never arrives, move on when the line's length (+3 s) has passed */
+    if(p&&p.then)p.then(function(){var ms=((isFinite(a.duration)&&a.duration)||10)*1000+3000;w._t=setTimeout(function(){if(fin||a.ended)return;if(k<aus.length-1)play(k+1);else end();},ms);},function(){});
     if(p&&p.catch)p.catch(function(){if(!fin){pb.hidden=false;lab.textContent=U('tapToHear');}});}
   aus.forEach(function(a,k){
     a.addEventListener('playing',function(){w.classList.add('playing');pb.hidden=true;if(!fin)lab.textContent=U('voicePlaying');});
