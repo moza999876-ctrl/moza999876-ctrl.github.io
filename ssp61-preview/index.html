@@ -2049,8 +2049,9 @@ function TL(x,lang){if(x===null||x===undefined)return '';if(typeof x==='string')
 function optLetter(i){return (typeof RTL!=='undefined'&&RTL[LANG])?'أبجدهوزح'.charAt(i)||String(i+1):String.fromCharCode(65+i);}
 function T(x){var s=TL(x,LANG);if(typeof s!=='string')return s;
   /* RTL: isolate Latin codes/acronyms/variables (MK3, XP, {n}) so they do not flip inside Arabic.
-     A dotted or dashed acronym (P.A.S.S., E-X-I-T-S, 5-YES) is one left-to-right unit: one mark per letter showed it reversed (SSAP, 2026-10-31) */
-  if(RTL[LANG]&&/[\u0600-\u06FF]/.test(s)&&/[A-Za-z]/.test(s))s=s.replace(/(<[^>]*>)|(\{[^}]+\}|\b\d+[\-\u2010-\u2013][A-Za-z]+\b|\b[A-Za-z](?:[.\-\u2010-\u2013][A-Za-z])+\b\.?|\b[A-Za-z][A-Za-z0-9]*\d*[A-Za-z0-9]*\b)/g,function(m,tag,tok){return tag?tag:'<bdi>'+tok+'</bdi>';});
+     A dotted or dashed acronym (P.A.S.S., E-X-I-T-S, 5-YES) is one left-to-right unit: one mark per letter showed it reversed (SSAP, 2026-10-31).
+     A call sign or place code with its number or letter (Alpha 1, Sierra 2, Block C) is one unit too: the number left outside jumped to the other side ('1 Alpha', SSP 6.2 QA, 2026-11-07) */
+  if(RTL[LANG]&&/[\u0600-\u06FF]/.test(s)&&/[A-Za-z]/.test(s))s=s.replace(/(<[^>]*>)|(\{[^}]+\}|\b\d+[\-\u2010-\u2013][A-Za-z]+\b|\b[A-Za-z](?:[.\-\u2010-\u2013][A-Za-z])+\b\.?|\b[A-Za-z][A-Za-z0-9]*(?: (?:\d+|[A-Z])\b)+|\b[A-Za-z][A-Za-z0-9]*\d*[A-Za-z0-9]*\b)/g,function(m,tag,tok){return tag?tag:'<bdi>'+tok+'</bdi>';});
   return s;}
 /* engine UI strings — English only. Translations come from the project pack (projects/<name>/ui-strings.csv → COURSE.uiText). COURSE.ui overrides per module. */
 var UI={
