@@ -1769,6 +1769,9 @@ body{background:var(--surface-2)}
 .cl-sub .stepper .link.filled{background:var(--navy)}
 .cl-sub .stepper .node .nt{display:none}
 .cl-sub .clockline{color:var(--navy)}
+/* Arabic labels are longer: on every phone up to 440 px (iPhone 13/14/15 = 390, Pro Max = 430) the menu and help labels go, the icons stay
+   (iPhone QA, 7 Nov 2026: the bar was 40 px wider than the screen in Arabic and cut off the points badge) */
+@media (max-width:440px){[dir=rtl] .cl-hl,[dir=rtl] .cl-mlabel{display:none}}
 @media (max-width:380px){.cl-hl,.cl-mlabel{display:none}.cl-help{padding:0 6px}.cl-logo{height:var(--logo-h-sm,24px)}.cl-barrow{gap:6px}.cl-tools{gap:5px}.cl-lang button{min-width:34px}}
 @media (min-width:1024px){
   .bar.cl-bar-top .cl-sub{margin:10px -28px -12px;padding:8px 28px 10px}
