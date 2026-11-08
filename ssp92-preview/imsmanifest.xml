@@ -27,6 +27,10 @@
       <file href="brand/fonts/Ubuntu-Light.ttf"/>
       <file href="brand/fonts/Ubuntu-Medium.ttf"/>
       <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp92-v0-hook.en.vtt"/>
+      <file href="captions/ssp92-v1-radio.en.vtt"/>
+      <file href="captions/ssp92-v2-brief.en.vtt"/>
+      <file href="captions/ssp92-v3-standover.en.vtt"/>
       <file href="fonts/CREDITS.txt"/>
       <file href="fonts/TwemojiCountryFlags.woff2"/>
       <file href="icons/custom-walkie-talkie.svg"/>
@@ -52,6 +56,10 @@
       <file href="images/cast/C-07.jpg"/>
       <file href="images/cast/C-08.jpg"/>
       <file href="scorm.js"/>
+      <file href="video/ssp92-v0-hook.mp4"/>
+      <file href="video/ssp92-v1-radio.mp4"/>
+      <file href="video/ssp92-v2-brief.mp4"/>
+      <file href="video/ssp92-v3-standover.mp4"/>
       <file href="aids/ssp92-routine-nonroutine-6cs-job-aids.pdf"/>
     </resource>
   </resources>
