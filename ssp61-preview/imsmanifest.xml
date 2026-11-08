@@ -27,6 +27,14 @@
       <file href="brand/fonts/Ubuntu-Light.ttf"/>
       <file href="brand/fonts/Ubuntu-Medium.ttf"/>
       <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp61-v1-report.ar.vtt"/>
+      <file href="captions/ssp61-v1-report.en.vtt"/>
+      <file href="captions/ssp61-v2-egress.ar.vtt"/>
+      <file href="captions/ssp61-v2-egress.en.vtt"/>
+      <file href="captions/ssp61-v3-late.ar.vtt"/>
+      <file href="captions/ssp61-v3-late.en.vtt"/>
+      <file href="captions/ssp61-v4-calm.ar.vtt"/>
+      <file href="captions/ssp61-v4-calm.en.vtt"/>
       <file href="fonts/CREDITS.txt"/>
       <file href="fonts/TwemojiCountryFlags.woff2"/>
       <file href="icons/custom-walkie-talkie.svg"/>
@@ -107,6 +115,10 @@
       <file href="images/ssp61-thumb-4.jpg"/>
       <file href="images/ssp61-thumb-6.jpg"/>
       <file href="scorm.js"/>
+      <file href="video/ssp61-v1-report.mp4"/>
+      <file href="video/ssp61-v2-egress.mp4"/>
+      <file href="video/ssp61-v3-late.mp4"/>
+      <file href="video/ssp61-v4-calm.mp4"/>
       <file href="aids/ssp61-dim-ice-flow-density-job-aids.pdf"/>
     </resource>
   </resources>
