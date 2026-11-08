@@ -2058,8 +2058,9 @@ function optLetter(i){return (typeof RTL!=='undefined'&&RTL[LANG])?'أبجدهو
 function T(x){var s=TL(x,LANG);if(typeof s!=='string')return s;
   /* RTL: isolate Latin codes/acronyms/variables (MK3, XP, {n}) so they do not flip inside Arabic.
      A dotted or dashed acronym (P.A.S.S., E-X-I-T-S, 5-YES) is one left-to-right unit: one mark per letter showed it reversed (SSAP, 2026-10-31).
-     A call sign or place code with its number or letter (Alpha 1, Sierra 2, Block C) is one unit too: the number left outside jumped to the other side ('1 Alpha', QA 2026-11-07) */
-  if(RTL[LANG]&&/[\u0600-\u06FF]/.test(s)&&/[A-Za-z]/.test(s))s=s.replace(/(<[^>]*>)|(\{[^}]+\}|\b\d+[\-\u2010-\u2013][A-Za-z]+\b|\b[A-Za-z](?:[.\-\u2010-\u2013][A-Za-z])+\b\.?|\b[A-Za-z][A-Za-z0-9]*(?: (?:\d+|[A-Z])\b)+|\b[A-Za-z][A-Za-z0-9]*\d*[A-Za-z0-9]*\b)/g,function(m,tag,tok){return tag?tag:'<bdi>'+tok+'</bdi>';});
+     A call sign or place code with its number or letter (Alpha 1, Sierra 2, Block C) is one unit too: the number left outside jumped to the other side ('1 Alpha', QA 2026-11-07).
+     A hyphenated name (DIM-ICE) is one unit: a mark per word showed it reversed ('ICE-DIM', SSP 6.1, 2026-11-09) */
+  if(RTL[LANG]&&/[\u0600-\u06FF]/.test(s)&&/[A-Za-z]/.test(s))s=s.replace(/(<[^>]*>)|(\{[^}]+\}|\b\d+[\-\u2010-\u2013][A-Za-z]+\b|\b[A-Za-z](?:[.\-\u2010-\u2013][A-Za-z])+\b\.?|\b[A-Za-z][A-Za-z0-9]*(?:[\-\u2010-\u2013][A-Za-z0-9]+)+\b|\b[A-Za-z][A-Za-z0-9]*(?: (?:\d+|[A-Z])\b)+|\b[A-Za-z][A-Za-z0-9]*\d*[A-Za-z0-9]*\b)/g,function(m,tag,tok){return tag?tag:'<bdi>'+tok+'</bdi>';});
   return s;}
 /* engine UI strings — English only. Translations come from the project pack (projects/<name>/ui-strings.csv → COURSE.uiText). COURSE.ui overrides per module. */
 var UI={
@@ -2107,6 +2108,8 @@ function U(k,v){var t=T(UI[k]);if(v)Object.keys(v).forEach(function(x){t=t.split
 /* attributes take plain text: aria-label, title and alt never keep the <bdi> marks T() adds in Arabic.
    plainAttr() for one value; watchAttrs() cleans every attribute path, now and later (2026-10-25) */
 function plainAttr(s){return String(s==null?'':s).replace(/<\/?[A-Za-z][^>]*>/g,'');}
+/* text from T() / U() into an element: as HTML when it carries <bdi> marks (they isolate Latin inside Arabic), else as text */
+function rich(e,s){if(!e)return;s=String(s==null?'':s);if(/<\/?bdi>/.test(s))e.innerHTML=s;else e.textContent=s;}
 var ATTRS_PLAIN=['aria-label','title','alt'];
 function cleanAttrs(root){if(!root||!root.querySelectorAll)return;var q='[aria-label*="<"],[title*="<"],[alt*="<"]';
   var els=[].slice.call(root.querySelectorAll(q));if(root.matches&&root.matches(q))els.push(root);
@@ -2117,17 +2120,19 @@ function watchAttrs(){cleanAttrs(document.body);if(!window.MutationObserver)retu
 function applyLang(){
   document.documentElement.lang=LANG;document.documentElement.dir=RTL[LANG]?'rtl':'ltr';
   try{localStorage.setItem('ck-lang',LANG);localStorage.setItem('ck-lang-'+COURSE.id,LANG);}catch(e){}
-  var m=g('mTitle');if(m)m.textContent=T(COURSE.titleI18n||COURSE.title);
+  /* a translated string keeps the <bdi> marks T() adds around Latin words in Arabic: write it as HTML (rich()), never as
+     textContent, or the marks show as text ('<bdi>DIM</bdi>-<bdi>ICE</bdi>' in the SSP 6.1 title bar, 2026-11-09) */
+  var m=g('mTitle');if(m)rich(m,T(COURSE.titleI18n||COURSE.title));
   var lb=g('langBtn');if(lb){lb.hidden=LANGS.length<2;var other=LANGS[(LANGS.indexOf(LANG)+1)%LANGS.length];
     lb.textContent=TL(UI.langName,other);lb.setAttribute('lang',other);lb.setAttribute('aria-label',U('switchTo'));}
   var hb=g('helpBtn');if(hb){hb.setAttribute('aria-label',U('help'));hb.title=U('help');}
   var jb2=g('jobBtn');if(jb2){jb2.setAttribute('aria-label',U('jobAids'));jb2.title=U('jobAids');}
   var bk=g('backBtn');if(bk)bk.innerHTML='<span aria-hidden="true">'+(RTL[LANG]?'›':'‹')+'</span> '+U('back');
-  var sk=g('skipLink');if(sk)sk.textContent=U('skip');
-  var rl=g('readyLabel');if(rl)rl.textContent=U('sections');
-  var cl=g('clockLabel');if(cl&&COURSE.final&&COURSE.final.barLabel)cl.textContent=T(COURSE.final.barLabel);
+  var sk=g('skipLink');if(sk)rich(sk,U('skip'));
+  var rl=g('readyLabel');if(rl)rich(rl,U('sections'));
+  var cl=g('clockLabel');if(cl&&COURSE.final&&COURSE.final.barLabel)rich(cl,T(COURSE.final.barLabel));
   g('stepper').querySelectorAll('.node').forEach(function(nd){var i=+nd.dataset.n,t=T(COURSE.sections[i-1].title);
-    nd.querySelector('.nt').textContent=t;nd.setAttribute('aria-label',U('section')+' '+i+': '+t);});
+    rich(nd.querySelector('.nt'),t);nd.setAttribute('aria-label',plainAttr(U('section')+' '+i+': '+t));});
 }
 function setLang(l){if(LANGS.indexOf(l)<0||l===LANG)return;LANG=l;applyLang();render(cur);}
 /* Help dialog — bilingual navigation guide; Esc or Close returns focus to the Help button */
@@ -2167,18 +2172,18 @@ function helpHtml(){
 }
 function openHelp(){
   var d=g('helpDlg');if(!d)return;
-  d.querySelector('#helpTitle').textContent=U('helpTitle');d.querySelector('.hbody').innerHTML=helpHtml();
-  d.querySelector('.hclose').textContent=U('close');d.hidden=false;g('app').setAttribute('aria-hidden','true');
+  rich(d.querySelector('#helpTitle'),U('helpTitle'));d.querySelector('.hbody').innerHTML=helpHtml();
+  rich(d.querySelector('.hclose'),U('close'));d.hidden=false;g('app').setAttribute('aria-hidden','true');
   d.querySelector('.hclose').focus({preventScroll:true});
   d.querySelector('.hpanel').scrollTop=0; // start at the top, not at the Close button
 }
 /* Job aids panel — downloadable PDFs listed in COURSE.jobAids [{title:{en,ar}, file, size}] */
 function openJobAids(){
   var d=g('jobDlg');if(!d)return;var list=COURSE.jobAids||[];
-  d.querySelector('#jobTitle').textContent=U('jobAids');
+  rich(d.querySelector('#jobTitle'),U('jobAids'));
   d.querySelector('.jbody').innerHTML=list.length?'<p class="jnote">'+U('jobAidsNote')+'</p><div class="jlist">'+list.map(function(j){return '<a class="jitem" href="'+j.file+'" download target="_blank" rel="noopener">'+icon('_doc')+'<span><b>'+T(j.title)+'</b>'+(j.size?'<small>'+j.size+'</small>':'')+'</span><i aria-hidden="true">⤓</i></a>';}).join('')+'</div>'
     :'<div class="mediaph missing"><span class="mpi">📎</span><b>'+U('noJobAids')+'</b></div>';
-  d.querySelector('.jclose').textContent=U('close');d.hidden=false;g('app').setAttribute('aria-hidden','true');
+  rich(d.querySelector('.jclose'),U('close'));d.hidden=false;g('app').setAttribute('aria-hidden','true');
   d.querySelector('.jclose').focus({preventScroll:true});d.querySelector('.hpanel').scrollTop=0;
 }
 function closeJobAids(){var d=g('jobDlg');if(!d||d.hidden)return;d.hidden=true;g('app').removeAttribute('aria-hidden');var b=g('jobBtn');if(b)b.focus();}
@@ -2555,7 +2560,7 @@ function vidSlot(host,name,opts){
   var fallbackEl=opts.hide?host.querySelector(opts.hide):null;
   if(fallbackEl)fallbackEl.style.display='none';
   var mb=w.querySelector('.mute');
-  function syncMuteBtn(){if(!mb)return;mb.setAttribute('aria-pressed',String(!v.muted));mb.textContent=(v.muted?'🔇 ':'🔊 ')+U('sound');}
+  function syncMuteBtn(){if(!mb)return;mb.setAttribute('aria-pressed',String(!v.muted));rich(mb,(v.muted?'🔇 ':'🔊 ')+U('sound'));}
   syncMuteBtn();
   var manual=!!opts.manual;   /* opts.manual (2026-10-25): the screen starts the clip itself (mark the moment) - no autoplay, no tap-to-resume */
   v.autoplay=!reduced&&!manual; if(!reduced&&!manual)v.setAttribute('autoplay','');
@@ -2650,7 +2655,7 @@ function boot(){
   var hd=g('helpDlg');if(hd){hd.querySelector('.hclose').addEventListener('click',closeHelp);hd.addEventListener('click',function(e){if(e.target===hd)closeHelp();});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeHelp();});}
   applyLang();
-  if(COURSE.final&&COURSE.final.barLabel){g('clockLabel').textContent=T(COURSE.final.barLabel);setClock(COURSE.final.clock||'');}
+  if(COURSE.final&&COURSE.final.barLabel){rich(g('clockLabel'),T(COURSE.final.barLabel));setClock(COURSE.final.clock||'');}
   g('backBtn').addEventListener('click',function(){if(cur>0)render(cur-1);});
   /* ---- SCORM 1.2: connect, restore suspended state, resume at bookmark ---- */
   var resumed=false;
@@ -3506,7 +3511,7 @@ Object.assign(BUILD,{
     var fill=mw.querySelector('.mfill'),face=mw.querySelector('.mface'),lab=mw.querySelector('.mlabel');
     var L=s.moodLabels||{};
     function paint(){var v=Math.max(0,Math.min(100,mood));fill.style.width=v+'%';fill.style.background=v>66?'var(--red)':v>40?'#e6a417':'var(--teal)';
-      face.textContent=v>75?'😡':v>55?'😠':v>35?'😐':v>18?'🙂':'😌';lab.textContent=(v>66?T(L.furious)||U('moodFurious'):v>40?T(L.tense)||U('moodTense'):v>20?T(L.calming)||U('moodCalming'):T(L.calm)||U('moodCalm'))+' · '+Math.round(v);}
+      face.textContent=v>75?'😡':v>55?'😠':v>35?'😐':v>18?'🙂':'😌';rich(lab,(v>66?T(L.furious)||U('moodFurious'):v>40?T(L.tense)||U('moodTense'):v>20?T(L.calming)||U('moodCalming'):T(L.calm)||U('moodCalm'))+' · '+Math.round(v));}
     paint();
     function bub(side,txt){var b=el('<div class="cbub '+side+'">'+txt+'</div>');chat.appendChild(b);b.scrollIntoView({block:'nearest'});}
     if(s.opening)bub('sp',T(s.opening));
@@ -4687,7 +4692,7 @@ function hearAll(files,done){
   var pb=w.querySelector('.hear-play'),ag=w.querySelector('.hear-again'),lab=w.querySelector('.hear-lab'),fin=false,called=false;
   function fire(){if(called)return;called=true;if(done)done();}
   var aus=files.map(function(f){var a=document.createElement('audio');a.preload='auto';a.src=f;w.appendChild(a);return a;});
-  function end(){if(fin)return;fin=true;clearTimeout(w._t);w._heard=true;w.classList.remove('playing');w.classList.add('heard');pb.hidden=true;ag.hidden=false;lab.textContent=U('voiceDone');fire();}
+  function end(){if(fin)return;fin=true;clearTimeout(w._t);w._heard=true;w.classList.remove('playing');w.classList.add('heard');pb.hidden=true;ag.hidden=false;rich(lab,U('voiceDone'));fire();}
   function play(k){if(!w.isConnected&&k>0)return;if(HEAR_NOW&&HEAR_NOW!==aus)HEAR_NOW.forEach(function(x){try{x.pause();}catch(_){}});HEAR_NOW=aus;
     aus.forEach(function(x,j){if(j!==k)try{x.pause();}catch(_){}});
     var a=aus[k];try{a.currentTime=0;}catch(_){}clearTimeout(w._t);
@@ -4697,9 +4702,9 @@ function hearAll(files,done){
     w._t=setTimeout(net,((isFinite(a.duration)&&a.duration)||12)*1000+3000);
     var p=a.play();
     if(p&&p.then)p.then(function(){clearTimeout(w._t);w._t=setTimeout(net,((isFinite(a.duration)&&a.duration)||10)*1000+3000);},function(){});
-    if(p&&p.catch)p.catch(function(){if(!fin){pb.hidden=false;lab.textContent=U('tapToHear');}});}
+    if(p&&p.catch)p.catch(function(){if(!fin){pb.hidden=false;rich(lab,U('tapToHear'));}});}
   aus.forEach(function(a,k){
-    a.addEventListener('playing',function(){w.classList.add('playing');pb.hidden=true;if(!fin)lab.textContent=U('voicePlaying');});
+    a.addEventListener('playing',function(){w.classList.add('playing');pb.hidden=true;if(!fin)rich(lab,U('voicePlaying'));});
     a.addEventListener('pause',function(){w.classList.remove('playing');});
     a.addEventListener('ended',function(){w.classList.remove('playing');if(k<aus.length-1)play(k+1);else end();});
     a.addEventListener('error',function(){if(k<aus.length-1)play(k+1);else end();});});
@@ -4937,7 +4942,7 @@ Object.assign(BUILD,{
       body.appendChild(el('<div class="es-rnd">'+U('phraseOf',{a:ri+1,b:R.length})+'</div>'));
       var p=el('<div class="lc-play"><button type="button" class="btn lc-btn"'+(src?'':' disabled')+'>&#9654; '+U('playPhrase')+'</button>'+(src?'<audio preload="auto" src="'+src+'"></audio>':'')+'</div>');
       body.appendChild(p);var pb=p.querySelector('button'),au=p.querySelector('audio');
-      if(au){au.addEventListener('error',function(){pb.disabled=true;pb.textContent=U('audioMissing');});
+      if(au){au.addEventListener('error',function(){pb.disabled=true;rich(pb,U('audioMissing'));});
         pb.addEventListener('click',function(){try{au.currentTime=0;var pr=au.play();if(pr&&pr.catch)pr.catch(function(){});}catch(_){}});
         var openOps=function(){[].forEach.call(body.querySelectorAll('.lc-ops button'),function(x){if(!x.classList.contains('no')&&!x.classList.contains('yes'))x.disabled=false;});var lb=body.querySelector('.lc-ops');if(lb)lb.classList.remove('waitvoice');};
         au.addEventListener('ended',openOps);au.addEventListener('error',openOps);if(COURSE.reviewFree)setTimeout(openOps,0);
@@ -4996,7 +5001,7 @@ Object.assign(BUILD,{
     var chk=contBtn(U('allocCheck'),check);chk.disabled=true;act.appendChild(chk);
     var go=cont(s,h);go.hidden=true;go.style.display='none';
     function say(t){live.textContent='';setTimeout(function(){live.textContent=t;},30);}
-    function hintTxt(){hint.textContent=done?'':sel?U('allocNow',{n:strip(pById(sel).name)}):U('allocHint');}
+    function hintTxt(){rich(hint,done?'':sel?U('allocNow',{n:strip(pById(sel).name)}):U('allocHint'));}
     function select(id){sel=(sel===id)?null:id;if(sel)say(U('allocSelected',{n:strip(pById(id).name)}));else say(U('allocDeselected',{n:strip(pById(id).name)}));fkey='p:'+id;render();}
     function put(sid){var cur=place[sid];if(lock[sid]||!sel)return;var pid=sel;
       /* a filled slot takes the selected person; the old one goes back to the people */
@@ -5113,7 +5118,7 @@ Object.assign(BUILD,{
     var btn=cont(s,h);btn.dataset.label=btn.textContent;gate(btn,0,need,U('opened'));
     function finish(i){if(done[i])return;done[i]=true;var n=Object.keys(done).length;gate(btn,n,need,U('opened'));
       if(rings){var r=rings.children[i];r.classList.add('seen');r.setAttribute('aria-pressed','true');}
-      live.textContent=U('storyDone',{t:strip(ST[i].title||'')});if(n>=need)svin(btn);}
+      live.textContent=plainAttr(U('storyDone',{t:strip(ST[i].title||'')}));if(n>=need)svin(btn);}
     /* the viewer: one story, slide by slide */
     function open(i,host,inline){
       var st_=ST[i],slides=st_.slides||[],n=slides.length,k=-1,unlocked={},timer=null,cur=null;
@@ -5448,7 +5453,7 @@ applyLang=function(){_clApply();
   document.querySelectorAll('.cl-lang button').forEach(function(x){var on=x.dataset.l===LANG;x.setAttribute('aria-pressed',on?'true':'false');x.classList.toggle('on',on);});
   var gr=document.querySelector('.cl-lang');if(gr)gr.setAttribute('aria-label',U('switchTo'));
   var hb=g('helpBtn');if(hb)hb.innerHTML='<span class="cl-q" aria-hidden="true">?</span><span class="cl-hl">'+U('help')+'</span>';
-  var ml=document.querySelector('.cl-mlabel');if(ml)ml.textContent=U('menu');
+  var ml=document.querySelector('.cl-mlabel');if(ml)rich(ml,U('menu'));
   var mb=document.querySelector('.cl-menu');if(mb)mb.setAttribute('aria-label',U('menu')+': '+U('allLessons'));
 };
 /* the bar shows on every screen except the language choice and the very end */
