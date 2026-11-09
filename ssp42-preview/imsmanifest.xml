@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp42preeventbriefing" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SSP 4.2 Delivering the pre-event briefing</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>SSP 4.2 Delivering the pre-event briefing</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp42-v1-clear.ar.vtt"/>
+      <file href="captions/ssp42-v1-clear.en.vtt"/>
+      <file href="captions/ssp42-v2-intel.ar.vtt"/>
+      <file href="captions/ssp42-v2-intel.en.vtt"/>
+      <file href="captions/ssp42-v3-ask.ar.vtt"/>
+      <file href="captions/ssp42-v3-ask.en.vtt"/>
+      <file href="captions/ssp42-v4-showme.ar.vtt"/>
+      <file href="captions/ssp42-v4-showme.en.vtt"/>
+      <file href="captions/ssp42-v5-report.ar.vtt"/>
+      <file href="captions/ssp42-v5-report.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-calendar.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-clipboard.png"/>
+      <file href="icons/fluent-3d-counterclockwise-arrows-button.png"/>
+      <file href="icons/fluent-3d-cross-mark.png"/>
+      <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-droplet.png"/>
+      <file href="icons/fluent-3d-ear.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-light-bulb.png"/>
+      <file href="icons/fluent-3d-locked.png"/>
+      <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-mobile-phone.png"/>
+      <file href="icons/fluent-3d-prohibited.png"/>
+      <file href="icons/fluent-3d-red-question-mark.png"/>
+      <file href="icons/fluent-3d-round-pushpin.png"/>
+      <file href="icons/fluent-3d-shield.png"/>
+      <file href="icons/fluent-3d-speaking-head.png"/>
+      <file href="icons/fluent-3d-speech-balloon.png"/>
+      <file href="icons/fluent-3d-sports-medal.png"/>
+      <file href="icons/fluent-3d-stadium.png"/>
+      <file href="icons/fluent-3d-stopwatch.png"/>
+      <file href="icons/fluent-3d-thinking-face.png"/>
+      <file href="icons/fluent-3d-waving-hand.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/ssp42-hero.jpg"/>
+      <file href="images/ssp42-s0-standby.jpg"/>
+      <file href="images/ssp42-s1-card.jpg"/>
+      <file href="images/ssp42-s3-breaks.jpg"/>
+      <file href="images/ssp42-s3-m35.jpg"/>
+      <file href="images/ssp42-s3-posts.jpg"/>
+      <file href="images/ssp42-s3-safety.jpg"/>
+      <file href="images/ssp42-s3-team.jpg"/>
+      <file href="images/ssp42-s4-mohammad.jpg"/>
+      <file href="images/ssp42-s5-papers.jpg"/>
+      <file href="images/ssp42-s6-dp2-surprise.jpg"/>
+      <file href="images/ssp42-s6-dp4-unsafe.jpg"/>
+      <file href="images/ssp42-s6-dp5-late.jpg"/>
+      <file href="images/ssp42-s6-team.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp42-v1-clear.mp4"/>
+      <file href="video/ssp42-v2-intel.mp4"/>
+      <file href="video/ssp42-v3-ask.mp4"/>
+      <file href="video/ssp42-v4-showme.mp4"/>
+      <file href="video/ssp42-v5-report.mp4"/>
+      <file href="aids/ssp42-pre-event-briefing-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
