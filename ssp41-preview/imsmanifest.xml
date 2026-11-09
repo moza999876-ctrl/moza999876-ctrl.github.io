@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp41signinkitmatchingposts" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SSP 4.1 Sign-in, kit &amp; matching marshals to posts</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>SSP 4.1 Sign-in, kit &amp; matching marshals to posts</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp41-v1-goeat.ar.vtt"/>
+      <file href="captions/ssp41-v1-goeat.en.vtt"/>
+      <file href="captions/ssp41-v3-besidefaisal.ar.vtt"/>
+      <file href="captions/ssp41-v3-besidefaisal.en.vtt"/>
+      <file href="captions/ssp41-v4-needtwo.ar.vtt"/>
+      <file href="captions/ssp41-v4-needtwo.en.vtt"/>
+      <file href="captions/ssp41-v6-cousin.ar.vtt"/>
+      <file href="captions/ssp41-v6-cousin.en.vtt"/>
+      <file href="captions/ssp41-v7-samiasks.ar.vtt"/>
+      <file href="captions/ssp41-v7-samiasks.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-alarm-clock.png"/>
+      <file href="icons/fluent-3d-bust-in-silhouette.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-glowing-star.png"/>
+      <file href="icons/fluent-3d-house.png"/>
+      <file href="icons/fluent-3d-identification-card.png"/>
+      <file href="icons/fluent-3d-man.png"/>
+      <file href="icons/fluent-3d-megaphone.png"/>
+      <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-person-in-manual-wheelchair.png"/>
+      <file href="icons/fluent-3d-person-walking.png"/>
+      <file href="icons/fluent-3d-round-pushpin.png"/>
+      <file href="icons/fluent-3d-safety-vest.png"/>
+      <file href="icons/fluent-3d-soccer-ball.png"/>
+      <file href="icons/fluent-3d-speech-balloon.png"/>
+      <file href="icons/fluent-3d-sports-medal.png"/>
+      <file href="icons/fluent-3d-warning.png"/>
+      <file href="icons/fluent-3d-woman.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/cast/F-02.jpg"/>
+      <file href="images/ssp41-c2-lang.jpg"/>
+      <file href="images/ssp41-c2-majed.jpg"/>
+      <file href="images/ssp41-c2-stairs.jpg"/>
+      <file href="images/ssp41-c2-voice.jpg"/>
+      <file href="images/ssp41-g1-dotplan.jpg"/>
+      <file href="images/ssp41-hero.jpg"/>
+      <file href="images/ssp41-s0-e8.jpg"/>
+      <file href="images/ssp41-s0-lane.jpg"/>
+      <file href="images/ssp41-s0-latecall.jpg"/>
+      <file href="images/ssp41-s0-radio.jpg"/>
+      <file href="images/ssp41-s1-checks.jpg"/>
+      <file href="images/ssp41-s2-lane.jpg"/>
+      <file href="images/ssp41-s4-accred.jpg"/>
+      <file href="images/ssp41-s4-desk.jpg"/>
+      <file href="images/ssp41-s4-note.jpg"/>
+      <file href="images/ssp41-s4-radio.jpg"/>
+      <file href="images/ssp41-s5-c1.jpg"/>
+      <file href="images/ssp41-s5-c2.jpg"/>
+      <file href="images/ssp41-s5-c3.jpg"/>
+      <file href="images/ssp41-s5-c4.jpg"/>
+      <file href="images/ssp41-s5-c5.jpg"/>
+      <file href="images/ssp41-s5-desk.jpg"/>
+      <file href="images/ssp41-s7-desk.jpg"/>
+      <file href="images/ssp41-s7-dp1.jpg"/>
+      <file href="images/ssp41-s7-dp3-unsafe.jpg"/>
+      <file href="images/ssp41-s7-dp3.jpg"/>
+      <file href="images/ssp41-s7-dp4-unsafe.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp41-v1-goeat.mp4"/>
+      <file href="video/ssp41-v3-besidefaisal.mp4"/>
+      <file href="video/ssp41-v4-needtwo.mp4"/>
+      <file href="video/ssp41-v6-cousin.mp4"/>
+      <file href="video/ssp41-v7-samiasks.mp4"/>
+      <file href="aids/ssp41-signin-kit-matching-posts-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
