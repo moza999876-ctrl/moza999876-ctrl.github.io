@@ -27,9 +27,13 @@
       <file href="brand/fonts/Ubuntu-Light.ttf"/>
       <file href="brand/fonts/Ubuntu-Medium.ttf"/>
       <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp92-v0-hook.ar.vtt"/>
       <file href="captions/ssp92-v0-hook.en.vtt"/>
+      <file href="captions/ssp92-v1-radio.ar.vtt"/>
       <file href="captions/ssp92-v1-radio.en.vtt"/>
+      <file href="captions/ssp92-v2-brief.ar.vtt"/>
       <file href="captions/ssp92-v2-brief.en.vtt"/>
+      <file href="captions/ssp92-v3-standover.ar.vtt"/>
       <file href="captions/ssp92-v3-standover.en.vtt"/>
       <file href="fonts/CREDITS.txt"/>
       <file href="fonts/TwemojiCountryFlags.woff2"/>
