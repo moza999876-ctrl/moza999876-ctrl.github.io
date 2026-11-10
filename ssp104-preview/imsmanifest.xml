@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp104difficultstafffeedback" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>Dealing with difficult staff and giving feedback</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>Dealing with difficult staff and giving feedback</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp104-v1-useless.ar.vtt"/>
+      <file href="captions/ssp104-v1-useless.en.vtt"/>
+      <file href="captions/ssp104-v2-phone.ar.vtt"/>
+      <file href="captions/ssp104-v2-phone.en.vtt"/>
+      <file href="captions/ssp104-v3-late.ar.vtt"/>
+      <file href="captions/ssp104-v3-late.en.vtt"/>
+      <file href="captions/ssp104-v4-radio.ar.vtt"/>
+      <file href="captions/ssp104-v4-radio.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-alarm-clock.png"/>
+      <file href="icons/fluent-3d-anger-symbol.png"/>
+      <file href="icons/fluent-3d-angry-face.png"/>
+      <file href="icons/fluent-3d-backhand-index-pointing-right.png"/>
+      <file href="icons/fluent-3d-balance-scale.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-camera-with-flash.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-counterclockwise-arrows-button.png"/>
+      <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-ear.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-face-with-thermometer.png"/>
+      <file href="icons/fluent-3d-handshake.png"/>
+      <file href="icons/fluent-3d-hourglass-not-done.png"/>
+      <file href="icons/fluent-3d-identification-card.png"/>
+      <file href="icons/fluent-3d-index-pointing-up.png"/>
+      <file href="icons/fluent-3d-label.png"/>
+      <file href="icons/fluent-3d-locked.png"/>
+      <file href="icons/fluent-3d-loudspeaker.png"/>
+      <file href="icons/fluent-3d-mobile-phone.png"/>
+      <file href="icons/fluent-3d-money-bag.png"/>
+      <file href="icons/fluent-3d-palm-down-hand.png"/>
+      <file href="icons/fluent-3d-prohibited.png"/>
+      <file href="icons/fluent-3d-soccer-ball.png"/>
+      <file href="icons/fluent-3d-speech-balloon.png"/>
+      <file href="icons/fluent-3d-stop-sign.png"/>
+      <file href="icons/fluent-3d-ticket.png"/>
+      <file href="icons/fluent-3d-warning.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/ssp104-hero.jpg"/>
+      <file href="images/ssp104-s0-debrief.jpg"/>
+      <file href="images/ssp104-s0-gangway.jpg"/>
+      <file href="images/ssp104-s2-phone.jpg"/>
+      <file href="images/ssp104-s4-gogo.jpg"/>
+      <file href="images/ssp104-s4-phrasecard.jpg"/>
+      <file href="images/ssp104-s4-praise.jpg"/>
+      <file href="images/ssp104-s4-private.jpg"/>
+      <file href="images/ssp104-s6-debrief-good.jpg"/>
+      <file href="images/ssp104-s6-dp1-poor.jpg"/>
+      <file href="images/ssp104-s6-sidebyside.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp104-v1-useless.mp4"/>
+      <file href="video/ssp104-v2-phone.mp4"/>
+      <file href="video/ssp104-v3-late.mp4"/>
+      <file href="video/ssp104-v4-radio.mp4"/>
+      <file href="aids/ssp104-difficult-staff-feedback-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
