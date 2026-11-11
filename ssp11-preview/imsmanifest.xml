@@ -27,6 +27,10 @@
       <file href="brand/fonts/Ubuntu-Light.ttf"/>
       <file href="brand/fonts/Ubuntu-Medium.ttf"/>
       <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp11-v1-decide.ar.vtt"/>
+      <file href="captions/ssp11-v1-decide.en.vtt"/>
+      <file href="captions/ssp11-v3-smoke.ar.vtt"/>
+      <file href="captions/ssp11-v3-smoke.en.vtt"/>
       <file href="captions/ssp11-v4-kit.ar.vtt"/>
       <file href="captions/ssp11-v4-kit.en.vtt"/>
       <file href="fonts/CREDITS.txt"/>
@@ -65,10 +69,18 @@
       <file href="images/ssp11-b2-noshow.jpg"/>
       <file href="images/ssp11-b3-barrier.jpg"/>
       <file href="images/ssp11-b4-calls.jpg"/>
+      <file href="images/ssp11-b5-stairs.jpg"/>
+      <file href="images/ssp11-c2-branch.jpg"/>
+      <file href="images/ssp11-c2-card.jpg"/>
+      <file href="images/ssp11-c2-jobaid.jpg"/>
+      <file href="images/ssp11-c2-log.jpg"/>
+      <file href="images/ssp11-c2-start.jpg"/>
       <file href="images/ssp11-hero.jpg"/>
       <file href="images/ssp11-s0-team.jpg"/>
       <file href="images/ssp11-s4-zone.jpg"/>
       <file href="scorm.js"/>
+      <file href="video/ssp11-v1-decide.mp4"/>
+      <file href="video/ssp11-v3-smoke.mp4"/>
       <file href="video/ssp11-v4-kit.mp4"/>
       <file href="aids/ssp11-welcome-course-baseline-job-aids.pdf"/>
     </resource>
