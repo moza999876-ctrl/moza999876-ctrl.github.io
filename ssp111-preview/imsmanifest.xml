@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp111supportingmarshalsconflict" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SSP 11.1 Supporting marshals in conflict: reading and defusing</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>SSP 11.1 Supporting marshals in conflict: reading and defusing</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp111-v1-calmdown.ar.vtt"/>
+      <file href="captions/ssp111-v1-calmdown.en.vtt"/>
+      <file href="captions/ssp111-v2-takeover.ar.vtt"/>
+      <file href="captions/ssp111-v2-takeover.en.vtt"/>
+      <file href="captions/ssp111-v3-options.ar.vtt"/>
+      <file href="captions/ssp111-v3-options.en.vtt"/>
+      <file href="captions/ssp111-v4-camera.ar.vtt"/>
+      <file href="captions/ssp111-v4-camera.en.vtt"/>
+      <file href="captions/ssp111-v5-areyouok.ar.vtt"/>
+      <file href="captions/ssp111-v5-areyouok.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-chair.png"/>
+      <file href="icons/fluent-3d-collision.png"/>
+      <file href="icons/fluent-3d-counterclockwise-arrows-button.png"/>
+      <file href="icons/fluent-3d-ear.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-handshake.png"/>
+      <file href="icons/fluent-3d-open-hands.png"/>
+      <file href="icons/fluent-3d-person-walking.png"/>
+      <file href="icons/fluent-3d-relieved-face.png"/>
+      <file href="icons/fluent-3d-shield.png"/>
+      <file href="icons/fluent-3d-speaking-head.png"/>
+      <file href="icons/fluent-3d-stop-sign.png"/>
+      <file href="icons/fluent-3d-thumbs-up.png"/>
+      <file href="icons/fluent-3d-warning.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/cast/F-02.jpg"/>
+      <file href="images/ssp111-board-barrier.jpg"/>
+      <file href="images/ssp111-hero.jpg"/>
+      <file href="images/ssp111-s0-cycle.jpg"/>
+      <file href="images/ssp111-s0-worse.jpg"/>
+      <file href="images/ssp111-s1-amber.jpg"/>
+      <file href="images/ssp111-s1-ladder.jpg"/>
+      <file href="images/ssp111-s1-red.jpg"/>
+      <file href="images/ssp111-s2-a.jpg"/>
+      <file href="images/ssp111-s2-hands.jpg"/>
+      <file href="images/ssp111-s2-l.jpg"/>
+      <file href="images/ssp111-s2-m.jpg"/>
+      <file href="images/ssp111-s2-p.jpg"/>
+      <file href="images/ssp111-s2-s.jpg"/>
+      <file href="images/ssp111-s3-gate7.jpg"/>
+      <file href="images/ssp111-s4-brief.jpg"/>
+      <file href="images/ssp111-s4-coach.jpg"/>
+      <file href="images/ssp111-s5-goal.jpg"/>
+      <file href="images/ssp111-s5-goal2.jpg"/>
+      <file href="images/ssp111-s5-lane2.jpg"/>
+      <file href="images/ssp111-s5-lane2b.jpg"/>
+      <file href="images/ssp111-s5-seat.jpg"/>
+      <file href="images/ssp111-s5-seat2.jpg"/>
+      <file href="images/ssp111-s6-argue.jpg"/>
+      <file href="images/ssp111-s6-calm.jpg"/>
+      <file href="images/ssp111-s6-faisal.jpg"/>
+      <file href="images/ssp111-s6-friend.jpg"/>
+      <file href="images/ssp111-s6-lane3.jpg"/>
+      <file href="images/ssp111-s6-omar.jpg"/>
+      <file href="images/ssp111-s6-security.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp111-v1-calmdown.mp4"/>
+      <file href="video/ssp111-v2-takeover.mp4"/>
+      <file href="video/ssp111-v3-options.mp4"/>
+      <file href="video/ssp111-v4-camera.mp4"/>
+      <file href="video/ssp111-v5-areyouok.mp4"/>
+      <file href="aids/ssp111-supporting-marshals-conflict-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
