@@ -39,6 +39,7 @@
       <file href="fonts/TwemojiCountryFlags.woff2"/>
       <file href="icons/custom-walkie-talkie.svg"/>
       <file href="icons/fluent-3d-admission-tickets.png"/>
+      <file href="icons/fluent-3d-bust-in-silhouette.png"/>
       <file href="icons/fluent-3d-busts-in-silhouette.png"/>
       <file href="icons/fluent-3d-candle.png"/>
       <file href="icons/fluent-3d-check-mark-button.png"/>
@@ -46,13 +47,18 @@
       <file href="icons/fluent-3d-compass.png"/>
       <file href="icons/fluent-3d-cross-mark.png"/>
       <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-fire.png"/>
       <file href="icons/fluent-3d-link.png"/>
       <file href="icons/fluent-3d-locked.png"/>
       <file href="icons/fluent-3d-magnifying-glass-tilted-left.png"/>
       <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-person-walking.png"/>
       <file href="icons/fluent-3d-raised-hand.png"/>
+      <file href="icons/fluent-3d-speech-balloon.png"/>
       <file href="icons/fluent-3d-sports-medal.png"/>
       <file href="icons/fluent-3d-stadium.png"/>
+      <file href="icons/fluent-3d-trophy.png"/>
       <file href="icons/fluent-3d-warning.png"/>
       <file href="icons/fluent-3d-wastebasket.png"/>
       <file href="images/cast/C-01.jpg"/>
@@ -66,6 +72,9 @@
       <file href="images/ssp13-s2-bradford.jpg"/>
       <file href="images/ssp13-s2-endplan.jpg"/>
       <file href="images/ssp13-s2-hillsborough.jpg"/>
+      <file href="images/ssp13-s2-standplan-step1.jpg"/>
+      <file href="images/ssp13-s2-standplan-step2.jpg"/>
+      <file href="images/ssp13-s2-standplan-step3.jpg"/>
       <file href="images/ssp13-s2-standplan.jpg"/>
       <file href="images/ssp13-s3-kiosk.jpg"/>
       <file href="images/ssp13-s3-scanners.jpg"/>
