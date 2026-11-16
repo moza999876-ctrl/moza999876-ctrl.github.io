@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp141communicatingteamcontrol" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SSP 14.1 Communicating with your team and control</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>SSP 14.1 Communicating with your team and control</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp141-v1-allcall.ar.vtt"/>
+      <file href="captions/ssp141-v1-allcall.en.vtt"/>
+      <file href="captions/ssp141-v2-report.ar.vtt"/>
+      <file href="captions/ssp141-v2-report.en.vtt"/>
+      <file href="captions/ssp141-v3-hold.ar.vtt"/>
+      <file href="captions/ssp141-v3-hold.en.vtt"/>
+      <file href="captions/ssp141-v4-tellback.ar.vtt"/>
+      <file href="captions/ssp141-v4-tellback.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-bell.png"/>
+      <file href="icons/fluent-3d-bust-in-silhouette.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-chequered-flag.png"/>
+      <file href="icons/fluent-3d-clipboard.png"/>
+      <file href="icons/fluent-3d-desktop-computer.png"/>
+      <file href="icons/fluent-3d-ear.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-handshake.png"/>
+      <file href="icons/fluent-3d-light-bulb.png"/>
+      <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-mobile-phone.png"/>
+      <file href="icons/fluent-3d-person-walking.png"/>
+      <file href="icons/fluent-3d-speech-balloon.png"/>
+      <file href="icons/fluent-3d-sports-medal.png"/>
+      <file href="icons/fluent-3d-stop-sign.png"/>
+      <file href="icons/fluent-3d-stopwatch.png"/>
+      <file href="icons/fluent-3d-trophy.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/ssp141-hero.jpg"/>
+      <file href="images/ssp141-s0-noisy.jpg"/>
+      <file href="images/ssp141-s2-closed.jpg"/>
+      <file href="images/ssp141-s2-open.jpg"/>
+      <file href="images/ssp141-s2-tools.jpg"/>
+      <file href="images/ssp141-s6-dp3.jpg"/>
+      <file href="images/ssp141-s6-egress.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp141-v1-allcall.mp4"/>
+      <file href="video/ssp141-v2-report.mp4"/>
+      <file href="video/ssp141-v3-hold.mp4"/>
+      <file href="video/ssp141-v4-tellback.mp4"/>
+      <file href="aids/ssp141-communicating-team-control-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
