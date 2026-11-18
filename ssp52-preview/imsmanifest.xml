@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp52gatesopeningressredeployment" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SSP 5.2 Gates open: ingress sequence &amp; re-deployment</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>SSP 5.2 Gates open: ingress sequence &amp; re-deployment</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp52-v1-strip.ar.vtt"/>
+      <file href="captions/ssp52-v1-strip.en.vtt"/>
+      <file href="captions/ssp52-v2-ask.ar.vtt"/>
+      <file href="captions/ssp52-v2-ask.en.vtt"/>
+      <file href="captions/ssp52-v4-callback.ar.vtt"/>
+      <file href="captions/ssp52-v4-callback.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-alarm-clock.png"/>
+      <file href="icons/fluent-3d-bust-in-silhouette.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-droplet.png"/>
+      <file href="icons/fluent-3d-handshake.png"/>
+      <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-round-pushpin.png"/>
+      <file href="icons/fluent-3d-sports-medal.png"/>
+      <file href="icons/fluent-3d-stadium.png"/>
+      <file href="icons/fluent-3d-warning.png"/>
+      <file href="icons/fluent-3d-woman.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/ssp52-m1-gate.jpg"/>
+      <file href="images/ssp52-r1-plan.jpg"/>
+      <file href="images/ssp52-r2-posts.jpg"/>
+      <file href="images/ssp52-r3-log.jpg"/>
+      <file href="images/ssp52-r4-radio.jpg"/>
+      <file href="images/ssp52-s1-plan.jpg"/>
+      <file href="images/ssp52-s2-plaza.jpg"/>
+      <file href="images/ssp52-s3-lanefull.jpg"/>
+      <file href="images/ssp52-s4-rush.jpg"/>
+      <file href="images/ssp52-s5-pressing.jpg"/>
+      <file href="images/ssp52-s6-concourse.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp52-v1-strip.mp4"/>
+      <file href="video/ssp52-v2-ask.mp4"/>
+      <file href="video/ssp52-v4-callback.mp4"/>
+      <file href="aids/ssp52-gates-open-ingress-redeployment-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
