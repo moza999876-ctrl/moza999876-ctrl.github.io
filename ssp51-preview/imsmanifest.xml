@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp51preeventchecksfittoopen" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SSP 5.1 Pre-event checks &amp; fit to open</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>SSP 5.1 Pre-event checks &amp; fit to open</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp51-v1-fine.ar.vtt"/>
+      <file href="captions/ssp51-v1-fine.en.vtt"/>
+      <file href="captions/ssp51-v3-call.ar.vtt"/>
+      <file href="captions/ssp51-v3-call.en.vtt"/>
+      <file href="captions/ssp51-v4-report.ar.vtt"/>
+      <file href="captions/ssp51-v4-report.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-backpack.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-chair.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-clipboard.png"/>
+      <file href="icons/fluent-3d-cross-mark.png"/>
+      <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-eye.png"/>
+      <file href="icons/fluent-3d-fire-extinguisher.png"/>
+      <file href="icons/fluent-3d-flashlight.png"/>
+      <file href="icons/fluent-3d-light-bulb.png"/>
+      <file href="icons/fluent-3d-locked.png"/>
+      <file href="icons/fluent-3d-man.png"/>
+      <file href="icons/fluent-3d-medical-symbol.png"/>
+      <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-raised-hand.png"/>
+      <file href="icons/fluent-3d-speaking-head.png"/>
+      <file href="icons/fluent-3d-sports-medal.png"/>
+      <file href="icons/fluent-3d-stopwatch.png"/>
+      <file href="icons/fluent-3d-thought-balloon.png"/>
+      <file href="icons/fluent-3d-toilet.png"/>
+      <file href="icons/fluent-3d-warning.png"/>
+      <file href="icons/fluent-3d-woman.png"/>
+      <file href="icons/fluent-3d-wrench.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/ssp51-e1-open.jpg"/>
+      <file href="images/ssp51-gate7a.jpg"/>
+      <file href="images/ssp51-h1-clipboard.jpg"/>
+      <file href="images/ssp51-h2-chained.jpg"/>
+      <file href="images/ssp51-plan.jpg"/>
+      <file href="images/ssp51-r1-checklist.jpg"/>
+      <file href="images/ssp51-r2-cable.jpg"/>
+      <file href="images/ssp51-r3-gauge.jpg"/>
+      <file href="images/ssp51-s-record.jpg"/>
+      <file href="images/ssp51-w1-exitgate.jpg"/>
+      <file href="images/ssp51-w2-firedoors.jpg"/>
+      <file href="images/ssp51-w3-concourse.jpg"/>
+      <file href="images/ssp51-w4-block107.jpg"/>
+      <file href="images/ssp51-x1-ready.jpg"/>
+      <file href="images/ssp51-x2-red.jpg"/>
+      <file href="images/ssp51-x3-floor.jpg"/>
+      <file href="images/ssp51-x4-empty.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp51-v1-fine.mp4"/>
+      <file href="video/ssp51-v3-call.mp4"/>
+      <file href="video/ssp51-v4-report.mp4"/>
+      <file href="aids/ssp51-pre-event-checks-fit-to-open-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
