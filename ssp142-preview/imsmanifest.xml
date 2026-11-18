@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp142serviceleadership" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>Service leadership: referred complaints, VIPs and diverse fans</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>Service leadership: referred complaints, VIPs and diverse fans</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp142-v1-takeover.ar.vtt"/>
+      <file href="captions/ssp142-v1-takeover.en.vtt"/>
+      <file href="captions/ssp142-v2-promise.ar.vtt"/>
+      <file href="captions/ssp142-v2-promise.en.vtt"/>
+      <file href="captions/ssp142-v3-media.ar.vtt"/>
+      <file href="captions/ssp142-v3-media.en.vtt"/>
+      <file href="captions/ssp142-v4-coach.ar.vtt"/>
+      <file href="captions/ssp142-v4-coach.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-alarm-clock.png"/>
+      <file href="icons/fluent-3d-balance-scale.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-camera.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-clipboard.png"/>
+      <file href="icons/fluent-3d-ear.png"/>
+      <file href="icons/fluent-3d-eye.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-folded-hands.png"/>
+      <file href="icons/fluent-3d-globe-showing-asia-australia.png"/>
+      <file href="icons/fluent-3d-glowing-star.png"/>
+      <file href="icons/fluent-3d-handshake.png"/>
+      <file href="icons/fluent-3d-hourglass-not-done.png"/>
+      <file href="icons/fluent-3d-identification-card.png"/>
+      <file href="icons/fluent-3d-megaphone.png"/>
+      <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-open-file-folder.png"/>
+      <file href="icons/fluent-3d-people-hugging.png"/>
+      <file href="icons/fluent-3d-person-in-manual-wheelchair.png"/>
+      <file href="icons/fluent-3d-prohibited.png"/>
+      <file href="icons/fluent-3d-raised-hand.png"/>
+      <file href="icons/fluent-3d-red-question-mark.png"/>
+      <file href="icons/fluent-3d-round-pushpin.png"/>
+      <file href="icons/fluent-3d-shield.png"/>
+      <file href="icons/fluent-3d-smiling-face-with-smiling-eyes.png"/>
+      <file href="icons/fluent-3d-speech-balloon.png"/>
+      <file href="icons/fluent-3d-star.png"/>
+      <file href="icons/fluent-3d-warning.png"/>
+      <file href="icons/fluent-3d-waving-hand.png"/>
+      <file href="icons/fluent-3d-woman.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/cast/F-03.jpg"/>
+      <file href="images/cast/F-04.jpg"/>
+      <file href="images/ssp142-hero.jpg"/>
+      <file href="images/ssp142-s0-anthem.jpg"/>
+      <file href="images/ssp142-s0-passedon.jpg"/>
+      <file href="images/ssp142-s0-row8.jpg"/>
+      <file href="images/ssp142-s2-welcome.jpg"/>
+      <file href="images/ssp142-s4-family.jpg"/>
+      <file href="images/ssp142-s5-e7.jpg"/>
+      <file href="images/ssp142-s6-seated.jpg"/>
+      <file href="images/ssp142-s6-wait.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp142-v1-takeover.mp4"/>
+      <file href="video/ssp142-v2-promise.mp4"/>
+      <file href="video/ssp142-v3-media.mp4"/>
+      <file href="video/ssp142-v4-coach.mp4"/>
+      <file href="aids/ssp142-service-leadership-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
