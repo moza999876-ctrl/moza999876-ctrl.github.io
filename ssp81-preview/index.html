@@ -616,6 +616,7 @@
   .mediaph .mpf{font-family:Consolas,monospace;font-size:11px;color:var(--faint)}
   .imgwrap{margin:0 0 12px}
   .imgwrap .simg{margin:0}
+  .scene-wrap>.imgwrap,.scene-wrap>.mediaph{margin:0}   /* tap spots are % of .scene-wrap: no gap under the picture, or every spot slides down (6% on a phone; SSP 5.1, 2026-11-19) */
   .guideimg{max-width:220px;margin:0 auto 12px!important;border-radius:50%!important;aspect-ratio:1/1;object-fit:cover}
   .consq.mixed{border-left-color:var(--amber)}
   .flashico{display:flex;align-items:center;justify-content:center;height:150px;background:var(--sky-tint)}
@@ -2705,7 +2706,7 @@ function boot(){
   }
   /* a review link may open one screen: <link>?screen=2.1 (review copies only, where reviewers move freely; user, 2026-11-19) */
   var sm=/[?&]screen=([^&#]+)/.exec(location.search);
-  if(!resumed&&sm&&COURSE.reviewFree){var si=idxOf(decodeURIComponent(sm[1]));if(si>=0){render(si);resumed=true;}}
+  if(sm&&COURSE.reviewFree){var si=idxOf(decodeURIComponent(sm[1]));if(si>=0){dropLangScreen();si=idxOf(decodeURIComponent(sm[1]));render(si);resumed=true;}}   /* the link wins over the place this browser remembers */
   if(!resumed)render(0);
 }
 /* once a language is chosen (or already known / resuming) the choice screen leaves the course for good */
