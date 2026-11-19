@@ -2703,6 +2703,9 @@ function boot(){
     window.addEventListener('pagehide',bye);
     window.addEventListener('beforeunload',bye);
   }
+  /* a review link may open one screen: <link>?screen=2.1 (review copies only, where reviewers move freely; user, 2026-11-19) */
+  var sm=/[?&]screen=([^&#]+)/.exec(location.search);
+  if(!resumed&&sm&&COURSE.reviewFree){var si=idxOf(decodeURIComponent(sm[1]));if(si>=0){render(si);resumed=true;}}
   if(!resumed)render(0);
 }
 /* once a language is chosen (or already known / resuming) the choice screen leaves the course for good */
@@ -4832,8 +4835,18 @@ Object.assign(BUILD,{
         P.map(function(p,i){return '<button type="button" class="mx-hs mx-sign tap" data-i="'+i+'" style="'+pos(p)+'">'+T(p.title)+'</button>';}).join('')+'</div>';}
     wrap.innerHTML=svg+'</svg>'+signs;h.appendChild(wrap);
     if(sg){var fit=function(){var R=wrap.getBoundingClientRect();if(!R.width)return;   /* a sign near an edge moves in so it is never cut off */
-        [].forEach.call(wrap.querySelectorAll('.mx-sign'),function(e){e.style.marginLeft='';var b=e.getBoundingClientRect();
-          if(b.left<R.left+2)e.style.marginLeft=(R.left+2-b.left)+'px';else if(b.right>R.right-2)e.style.marginLeft=(R.right-2-b.right)+'px';});};
+        var all=[].slice.call(wrap.querySelectorAll('.mx-sign'));
+        all.forEach(function(e){e.style.marginLeft='';e.style.marginTop='';var b=e.getBoundingClientRect();
+          if(b.left<R.left+2)e.style.marginLeft=(R.left+2-b.left)+'px';else if(b.right>R.right-2)e.style.marginLeft=(R.right-2-b.right)+'px';});
+        /* signs never cover each other (longer words wrap on a phone, e.g. in Arabic): a plain sign moves before a tap sign, up or down, inside the plan */
+        for(var pass=0;pass<4;pass++){var moved=false;
+          for(var i=0;i<all.length;i++)for(var j=i+1;j<all.length;j++){var A=all[i].getBoundingClientRect(),B=all[j].getBoundingClientRect();
+            if(!(A.left<B.right&&B.left<A.right&&A.top<B.bottom+2&&B.top<A.bottom+2))continue;
+            var mv=all[i].classList.contains('plain')&&!all[j].classList.contains('plain')?i:j,M=mv===i?A:B,O=mv===i?B:A;
+            var dy=(M.top+M.bottom)/2>=(O.top+O.bottom)/2?O.bottom+3-M.top:O.top-3-M.bottom;
+            if(M.top+dy<R.top+1||M.bottom+dy>R.bottom-1)dy=dy>0?O.top-3-M.bottom:O.bottom+3-M.top;   /* no room that way: the other way */
+            all[mv].style.marginTop=((parseFloat(all[mv].style.marginTop)||0)+dy)+'px';moved=true;}
+          if(!moved)break;}};
       requestAnimationFrame(fit);setTimeout(fit,400);window.addEventListener('resize',fit);}
     var num=function(i){return sg?'':(i+1)+'. ';};
     var det=el('<div class="mx-detail" aria-live="polite"><span class="hint">'+U(sg?'tapASign':'tapANumber')+'</span></div>');h.appendChild(det);
