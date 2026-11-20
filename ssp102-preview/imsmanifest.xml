@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp102objectivesdelegationpriorities" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>Objectives, delegation and priorities on match day</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>Objectives, delegation and priorities on match day</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp102-v1-vague.ar.vtt"/>
+      <file href="captions/ssp102-v1-vague.en.vtt"/>
+      <file href="captions/ssp102-v2-smart.ar.vtt"/>
+      <file href="captions/ssp102-v2-smart.en.vtt"/>
+      <file href="captions/ssp102-v3-report.ar.vtt"/>
+      <file href="captions/ssp102-v3-report.en.vtt"/>
+      <file href="captions/ssp102-v4-delegate.ar.vtt"/>
+      <file href="captions/ssp102-v4-delegate.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-alarm-clock.png"/>
+      <file href="icons/fluent-3d-bullseye.png"/>
+      <file href="icons/fluent-3d-bust-in-silhouette.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-clipboard.png"/>
+      <file href="icons/fluent-3d-cross-mark.png"/>
+      <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-handshake.png"/>
+      <file href="icons/fluent-3d-information.png"/>
+      <file href="icons/fluent-3d-magnifying-glass-tilted-left.png"/>
+      <file href="icons/fluent-3d-man.png"/>
+      <file href="icons/fluent-3d-megaphone.png"/>
+      <file href="icons/fluent-3d-pen.png"/>
+      <file href="icons/fluent-3d-person-walking.png"/>
+      <file href="icons/fluent-3d-red-question-mark.png"/>
+      <file href="icons/fluent-3d-round-pushpin.png"/>
+      <file href="icons/fluent-3d-speech-balloon.png"/>
+      <file href="icons/fluent-3d-sports-medal.png"/>
+      <file href="icons/fluent-3d-straight-ruler.png"/>
+      <file href="icons/fluent-3d-ticket.png"/>
+      <file href="icons/fluent-3d-toilet.png"/>
+      <file href="icons/fluent-3d-toolbox.png"/>
+      <file href="icons/fluent-3d-wheelchair-symbol.png"/>
+      <file href="icons/fluent-3d-woman-with-headscarf.png"/>
+      <file href="icons/fluent-3d-woman.png"/>
+      <file href="icons/fluent-3d-world-map.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/ssp102-hero.jpg"/>
+      <file href="images/ssp102-s0-busy.jpg"/>
+      <file href="images/ssp102-s2-kit.jpg"/>
+      <file href="images/ssp102-s2-pallets.jpg"/>
+      <file href="images/ssp102-s4-assign.jpg"/>
+      <file href="images/ssp102-s6-lanes.jpg"/>
+      <file href="images/ssp102-s6-lift.jpg"/>
+      <file href="images/ssp102-s6-plan.jpg"/>
+      <file href="images/ssp102-s6-thanks.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp102-v1-vague.mp4"/>
+      <file href="video/ssp102-v2-smart.mp4"/>
+      <file href="video/ssp102-v3-report.mp4"/>
+      <file href="video/ssp102-v4-delegate.mp4"/>
+      <file href="aids/ssp102-objectives-delegation-priorities-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
