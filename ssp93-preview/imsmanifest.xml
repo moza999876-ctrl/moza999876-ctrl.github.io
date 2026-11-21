@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp93criticalinfosaferapar" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>Critical information under pressure</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>Critical information under pressure</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp93-v1-medical.ar.vtt"/>
+      <file href="captions/ssp93-v1-medical.en.vtt"/>
+      <file href="captions/ssp93-v2-lostchild.ar.vtt"/>
+      <file href="captions/ssp93-v2-lostchild.en.vtt"/>
+      <file href="captions/ssp93-v3-doorway.ar.vtt"/>
+      <file href="captions/ssp93-v3-doorway.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-alarm-clock.png"/>
+      <file href="icons/fluent-3d-balance-scale.png"/>
+      <file href="icons/fluent-3d-bar-chart.png"/>
+      <file href="icons/fluent-3d-bust-in-silhouette.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-chart-increasing.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-clipboard.png"/>
+      <file href="icons/fluent-3d-credit-card.png"/>
+      <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-ear.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-fire.png"/>
+      <file href="icons/fluent-3d-handshake.png"/>
+      <file href="icons/fluent-3d-locked.png"/>
+      <file href="icons/fluent-3d-medical-symbol.png"/>
+      <file href="icons/fluent-3d-pause-button.png"/>
+      <file href="icons/fluent-3d-pencil.png"/>
+      <file href="icons/fluent-3d-people-hugging.png"/>
+      <file href="icons/fluent-3d-person-raising-hand.png"/>
+      <file href="icons/fluent-3d-person-walking.png"/>
+      <file href="icons/fluent-3d-red-question-mark.png"/>
+      <file href="icons/fluent-3d-repeat-button.png"/>
+      <file href="icons/fluent-3d-rescue-workers-helmet.png"/>
+      <file href="icons/fluent-3d-shield.png"/>
+      <file href="icons/fluent-3d-speaking-head.png"/>
+      <file href="icons/fluent-3d-toilet.png"/>
+      <file href="icons/fluent-3d-up-arrow.png"/>
+      <file href="icons/fluent-3d-warning.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/F-02.jpg"/>
+      <file href="images/cast/F-08.jpg"/>
+      <file href="images/ssp93-s0-hook.jpg"/>
+      <file href="images/ssp93-s2-stepback.jpg"/>
+      <file href="images/ssp93-s5-log.jpg"/>
+      <file href="images/ssp93-s5-stair.jpg"/>
+      <file href="images/ssp93-s7-contain.jpg"/>
+      <file href="images/ssp93-s7-door.jpg"/>
+      <file href="images/ssp93-s7-omar.jpg"/>
+      <file href="images/ssp93-s7-plan.jpg"/>
+      <file href="images/ssp93-s7-walkway.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp93-v1-medical.mp4"/>
+      <file href="video/ssp93-v2-lostchild.mp4"/>
+      <file href="video/ssp93-v3-doorway.mp4"/>
+      <file href="aids/ssp93-critical-info-safer-apar-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
