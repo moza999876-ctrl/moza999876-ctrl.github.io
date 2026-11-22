@@ -31,8 +31,6 @@
       <file href="captions/ssp91-v0-tunnel.en.vtt"/>
       <file href="captions/ssp91-v1-lookup.ar.vtt"/>
       <file href="captions/ssp91-v1-lookup.en.vtt"/>
-      <file href="captions/ssp91-v2-handover.ar.vtt"/>
-      <file href="captions/ssp91-v2-handover.en.vtt"/>
       <file href="captions/ssp91-v3-radio.ar.vtt"/>
       <file href="captions/ssp91-v3-radio.en.vtt"/>
       <file href="fonts/CREDITS.txt"/>
@@ -75,6 +73,7 @@
       <file href="images/ssp91-s2-gate-a.jpg"/>
       <file href="images/ssp91-s2-gate-b.jpg"/>
       <file href="images/ssp91-s2-tunnel.jpg"/>
+      <file href="images/ssp91-s4-handover.jpg"/>
       <file href="images/ssp91-s4-reem-queue.jpg"/>
       <file href="images/ssp91-s4-stepback.jpg"/>
       <file href="images/ssp91-s5-calm.jpg"/>
@@ -84,7 +83,6 @@
       <file href="scorm.js"/>
       <file href="video/ssp91-v0-tunnel.mp4"/>
       <file href="video/ssp91-v1-lookup.mp4"/>
-      <file href="video/ssp91-v2-handover.mp4"/>
       <file href="video/ssp91-v3-radio.mp4"/>
       <file href="aids/ssp91-decisions-go-wrong-job-aids.pdf"/>
     </resource>
