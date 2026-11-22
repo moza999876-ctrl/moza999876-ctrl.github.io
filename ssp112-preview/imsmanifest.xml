@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp112escalatedincidentsfightsgroups" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SSP 11.2 Escalated Incidents: Fights &amp; Groups</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>SSP 11.2 Escalated Incidents: Fights &amp; Groups</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp112-v1-getin.ar.vtt"/>
+      <file href="captions/ssp112-v1-getin.en.vtt"/>
+      <file href="captions/ssp112-v2-stepback.ar.vtt"/>
+      <file href="captions/ssp112-v2-stepback.en.vtt"/>
+      <file href="captions/ssp112-v3-disturbance.ar.vtt"/>
+      <file href="captions/ssp112-v3-disturbance.en.vtt"/>
+      <file href="captions/ssp112-v4-tasks.ar.vtt"/>
+      <file href="captions/ssp112-v4-tasks.en.vtt"/>
+      <file href="captions/ssp112-v5-debrief.ar.vtt"/>
+      <file href="captions/ssp112-v5-debrief.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-balance-scale.png"/>
+      <file href="icons/fluent-3d-bust-in-silhouette.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-clipboard.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-left-right-arrow.png"/>
+      <file href="icons/fluent-3d-light-bulb.png"/>
+      <file href="icons/fluent-3d-magnifying-glass-tilted-left.png"/>
+      <file href="icons/fluent-3d-man.png"/>
+      <file href="icons/fluent-3d-medical-symbol.png"/>
+      <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-no-entry.png"/>
+      <file href="icons/fluent-3d-people-hugging.png"/>
+      <file href="icons/fluent-3d-person-climbing.png"/>
+      <file href="icons/fluent-3d-person-standing.png"/>
+      <file href="icons/fluent-3d-person-walking.png"/>
+      <file href="icons/fluent-3d-police-car-light.png"/>
+      <file href="icons/fluent-3d-prohibited.png"/>
+      <file href="icons/fluent-3d-raised-hand.png"/>
+      <file href="icons/fluent-3d-red-heart.png"/>
+      <file href="icons/fluent-3d-round-pushpin.png"/>
+      <file href="icons/fluent-3d-shield.png"/>
+      <file href="icons/fluent-3d-speaking-head.png"/>
+      <file href="icons/fluent-3d-stop-sign.png"/>
+      <file href="icons/fluent-3d-telephone.png"/>
+      <file href="icons/fluent-3d-warning.png"/>
+      <file href="icons/fluent-3d-woman.png"/>
+      <file href="icons/fluent-3d-world-map.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/ssp112-blockd.jpg"/>
+      <file href="images/ssp112-board.jpg"/>
+      <file href="images/ssp112-handover.jpg"/>
+      <file href="images/ssp112-hero.jpg"/>
+      <file href="images/ssp112-hook-after.jpg"/>
+      <file href="images/ssp112-map-kiosk4.jpg"/>
+      <file href="images/ssp112-pop-concourse.jpg"/>
+      <file href="images/ssp112-rania-stops.jpg"/>
+      <file href="images/ssp112-st-chant.jpg"/>
+      <file href="images/ssp112-st-crowd.jpg"/>
+      <file href="images/ssp112-st-kiosk.jpg"/>
+      <file href="images/ssp112-st-push.jpg"/>
+      <file href="images/ssp112-st-radio.jpg"/>
+      <file href="images/ssp112-st-security.jpg"/>
+      <file href="images/ssp112-st-team.jpg"/>
+      <file href="images/ssp112-team-behind.jpg"/>
+      <file href="images/ssp112-trap.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp112-v1-getin.mp4"/>
+      <file href="video/ssp112-v2-stepback.mp4"/>
+      <file href="video/ssp112-v3-disturbance.mp4"/>
+      <file href="video/ssp112-v4-tasks.mp4"/>
+      <file href="video/ssp112-v5-debrief.mp4"/>
+      <file href="aids/ssp112-escalated-incidents-fights-groups-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
