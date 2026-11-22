@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.course.ssp12marshaltosupervisorauthority" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SSP 1.2 From marshal to supervisor: role, authority &amp; accountability</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>SSP 1.2 From marshal to supervisor: role, authority &amp; accountability</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="brand/afc-logo-master-800.png"/>
+      <file href="brand/afc-ssp-start-picture.jpg"/>
+      <file href="brand/fonts/Ubuntu-Light.ttf"/>
+      <file href="brand/fonts/Ubuntu-Medium.ttf"/>
+      <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp12-v1-gate.ar.vtt"/>
+      <file href="captions/ssp12-v1-gate.en.vtt"/>
+      <file href="captions/ssp12-v2-report.ar.vtt"/>
+      <file href="captions/ssp12-v2-report.en.vtt"/>
+      <file href="captions/ssp12-v3-notours.ar.vtt"/>
+      <file href="captions/ssp12-v3-notours.en.vtt"/>
+      <file href="captions/ssp12-v4-security.ar.vtt"/>
+      <file href="captions/ssp12-v4-security.en.vtt"/>
+      <file href="fonts/CREDITS.txt"/>
+      <file href="fonts/TwemojiCountryFlags.woff2"/>
+      <file href="icons/custom-walkie-talkie.svg"/>
+      <file href="icons/fluent-3d-balance-scale.png"/>
+      <file href="icons/fluent-3d-busts-in-silhouette.png"/>
+      <file href="icons/fluent-3d-camera-with-flash.png"/>
+      <file href="icons/fluent-3d-check-mark-button.png"/>
+      <file href="icons/fluent-3d-clipboard.png"/>
+      <file href="icons/fluent-3d-counterclockwise-arrows-button.png"/>
+      <file href="icons/fluent-3d-cross-mark.png"/>
+      <file href="icons/fluent-3d-door.png"/>
+      <file href="icons/fluent-3d-eyes.png"/>
+      <file href="icons/fluent-3d-fire.png"/>
+      <file href="icons/fluent-3d-high-voltage.png"/>
+      <file href="icons/fluent-3d-hourglass-not-done.png"/>
+      <file href="icons/fluent-3d-information.png"/>
+      <file href="icons/fluent-3d-light-bulb.png"/>
+      <file href="icons/fluent-3d-link.png"/>
+      <file href="icons/fluent-3d-medical-symbol.png"/>
+      <file href="icons/fluent-3d-memo.png"/>
+      <file href="icons/fluent-3d-person-walking.png"/>
+      <file href="icons/fluent-3d-prohibited.png"/>
+      <file href="icons/fluent-3d-raised-hand.png"/>
+      <file href="icons/fluent-3d-shield.png"/>
+      <file href="icons/fluent-3d-speech-balloon.png"/>
+      <file href="icons/fluent-3d-sports-medal.png"/>
+      <file href="icons/fluent-3d-stadium.png"/>
+      <file href="icons/fluent-3d-trophy.png"/>
+      <file href="icons/fluent-3d-world-map.png"/>
+      <file href="images/cast/C-01.jpg"/>
+      <file href="images/cast/C-04.jpg"/>
+      <file href="images/cast/C-05.jpg"/>
+      <file href="images/cast/C-06.jpg"/>
+      <file href="images/cast/C-07.jpg"/>
+      <file href="images/cast/C-08.jpg"/>
+      <file href="images/ssp12-hero.jpg"/>
+      <file href="images/ssp12-s0-gate.jpg"/>
+      <file href="images/ssp12-s1-vantage.jpg"/>
+      <file href="images/ssp12-s2-barrier.jpg"/>
+      <file href="images/ssp12-s2-child.jpg"/>
+      <file href="images/ssp12-s2-collapse.jpg"/>
+      <file href="images/ssp12-s2-refusal.jpg"/>
+      <file href="images/ssp12-s2-smoke.jpg"/>
+      <file href="images/ssp12-s4-m-argue.jpg"/>
+      <file href="images/ssp12-s4-m-gate.jpg"/>
+      <file href="images/ssp12-s4-m-scanner.jpg"/>
+      <file href="images/ssp12-s6-briefing.jpg"/>
+      <file href="images/ssp12-s6-dp2-unsafe.jpg"/>
+      <file href="images/ssp12-s6-dp3.jpg"/>
+      <file href="images/ssp12-s6-dp4-unsafe.jpg"/>
+      <file href="images/ssp12-s6-dp4.jpg"/>
+      <file href="scorm.js"/>
+      <file href="video/ssp12-v1-gate.mp4"/>
+      <file href="video/ssp12-v2-report.mp4"/>
+      <file href="video/ssp12-v3-notours.mp4"/>
+      <file href="video/ssp12-v4-security.mp4"/>
+      <file href="aids/ssp12-marshal-to-supervisor-authority-job-aids.pdf"/>
+    </resource>
+  </resources>
+</manifest>
