@@ -2081,6 +2081,9 @@ function T(x){var s=TL(x,LANG);if(typeof s!=='string')return s;
      A call sign or place code with its number or letter (Alpha 1, Sierra 2, Block C) is one unit too: the number left outside jumped to the other side ('1 Alpha', QA 2026-11-07).
      A hyphenated name (DIM-ICE) is one unit: a mark per word showed it reversed ('ICE-DIM', 2026-11-09) */
   if(RTL[LANG]&&/[\u0600-\u06FF]/.test(s)&&/[A-Za-z]/.test(s))s=s.replace(/(<[^>]*>)|(\{[^}]+\}|\b\d+[\-\u2010-\u2013][A-Za-z]+\b|\b[A-Za-z](?:[.\-\u2010-\u2013][A-Za-z])+\b\.?|\b[A-Za-z][A-Za-z0-9]*(?:[\-\u2010-\u2013][A-Za-z0-9]+)+\b|\b[A-Za-z][A-Za-z0-9]*(?: (?:\d+|[A-Z])\b)+|\b[A-Za-z][A-Za-z0-9]*\d*[A-Za-z0-9]*\b)/g,function(m,tag,tok){return tag?tag:'<bdi>'+tok+'</bdi>';});
+  /* a dotted acronym standing alone on an RTL screen (a kicker 'S.A.F.E.R.') has no Arabic around it, so the rule above never runs and
+     the final dot jumped to the start ('.S.A.F.E.R', QA 2026-11-22): isolate it as one left-to-right unit */
+  else if(RTL[LANG]&&/^\s*[A-Za-z](?:[.\-‐-–][A-Za-z])+\.?\s*$/.test(s))s='<bdi>'+s.trim()+'</bdi>';
   return s;}
 /* engine UI strings — English only. Translations come from the project pack (projects/<name>/ui-strings.csv → COURSE.uiText). COURSE.ui overrides per module. */
 var UI={
