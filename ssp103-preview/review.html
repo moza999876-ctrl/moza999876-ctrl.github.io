@@ -885,7 +885,7 @@
   }
 
   /* stamp: keep to one line on phones */
-  @media (max-width:639px){.stamp{font-size:12px;letter-spacing:.06em;max-width:96%;padding:8px 12px}}
+  @media (max-width:639px){.stamp{font-size:12px;letter-spacing:.06em;max-width:96%;padding:8px 12px} div.stamp{max-width:88%;overflow-wrap:anywhere;transform:rotate(-1.5deg)} [dir=rtl] div.stamp{transform:rotate(1.5deg)}}  /* 23 Nov: a long takeaway stamp was cut at the edge on iPhone (WebKit): narrower box, smaller tilt; font unchanged */
 
   /* cast portraits above a question that names characters (never inside the question text) */
   .castrow{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}
@@ -3174,7 +3174,9 @@ Object.assign(BUILD,{
       var im=b.querySelector('.rpic');if(im)im.addEventListener('error',function(){var f=im.parentNode;im.remove();f.classList.add('nopic');});
       grid.appendChild(b);
     });
-    h.appendChild(grid);var btn=cont(s,h);btn.dataset.label=btn.textContent;if(s.requireAll!==false)gate(btn,0,n,U('opened'));
+    h.appendChild(grid);
+    if(s.callout)h.appendChild(el('<div class="callout"><b>'+T(s.callout)+'</b></div>'));   /* the callout was never shown on tile cards - a line saying 'the list is below' pointed at nothing (review comment, 2026-11-23) */
+    var btn=cont(s,h);btn.dataset.label=btn.textContent;if(s.requireAll!==false)gate(btn,0,n,U('opened'));
   },
   /* badges grid: locked by default, highlighted one glows */
   badgeWall:function(s,h){
