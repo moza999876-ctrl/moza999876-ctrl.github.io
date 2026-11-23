@@ -27,6 +27,14 @@
       <file href="brand/fonts/Ubuntu-Light.ttf"/>
       <file href="brand/fonts/Ubuntu-Medium.ttf"/>
       <file href="brand/fonts/Ubuntu-Regular.ttf"/>
+      <file href="captions/ssp151-v1-brief.ar.vtt"/>
+      <file href="captions/ssp151-v1-brief.en.vtt"/>
+      <file href="captions/ssp151-v2-nosearch.ar.vtt"/>
+      <file href="captions/ssp151-v2-nosearch.en.vtt"/>
+      <file href="captions/ssp151-v3-assist.ar.vtt"/>
+      <file href="captions/ssp151-v3-assist.en.vtt"/>
+      <file href="captions/ssp151-v4-longqueue.ar.vtt"/>
+      <file href="captions/ssp151-v4-longqueue.en.vtt"/>
       <file href="fonts/CREDITS.txt"/>
       <file href="fonts/TwemojiCountryFlags.woff2"/>
       <file href="icons/custom-walkie-talkie.svg"/>
@@ -68,7 +76,26 @@
       <file href="images/cast/C-07.jpg"/>
       <file href="images/cast/C-08.jpg"/>
       <file href="images/cast/F-02.jpg"/>
+      <file href="images/ssp151-hero.jpg"/>
+      <file href="images/ssp151-s0-lane2.jpg"/>
+      <file href="images/ssp151-s1-longqueue.jpg"/>
+      <file href="images/ssp151-s1-plan.jpg"/>
+      <file href="images/ssp151-s3-aside.jpg"/>
+      <file href="images/ssp151-s3-bag.jpg"/>
+      <file href="images/ssp151-s3-longqueue.jpg"/>
+      <file href="images/ssp151-s3-walk.jpg"/>
+      <file href="images/ssp151-s4-plan-empty.jpg"/>
+      <file href="images/ssp151-s4-wrong.jpg"/>
+      <file href="images/ssp151-s5-lane4.jpg"/>
+      <file href="images/ssp151-s5-ris.jpg"/>
+      <file href="images/ssp151-s5-ticket-good.jpg"/>
+      <file href="images/ssp151-s5-ticket.jpg"/>
+      <file href="images/ssp151-s5-welfare.jpg"/>
       <file href="scorm.js"/>
+      <file href="video/ssp151-v1-brief.mp4"/>
+      <file href="video/ssp151-v2-nosearch.mp4"/>
+      <file href="video/ssp151-v3-assist.mp4"/>
+      <file href="video/ssp151-v4-longqueue.mp4"/>
       <file href="aids/ssp151-supervising-gate-interface-job-aids.pdf"/>
     </resource>
   </resources>
